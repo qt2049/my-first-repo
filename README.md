@@ -1,7 +1,7 @@
 # my-first-repo
 
-# This is an edit test
+## This is an edit test
 
-# All good
+## All good
 
 Thanks!
