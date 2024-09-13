@@ -1,5 +1,13 @@
 let books = [];
 
+function deleteBook(index) {
+
+    if (index < books.length) {
+        books.splice(index, 1);
+        showbooks();
+    }
+}
+
 function addBook() {
     const bookName = document.getElementById('bookName').value;
     const authorName = document.getElementById('authorName').value;
@@ -25,7 +33,8 @@ function showbooks() {
         <p><strong>Book Name: </strong>${book.name}</p>
         <p><strong>Author Name:</strong> ${book.authorName}</p>
         <p><strong>Book Description:</strong> ${book.bookDescription}</p>
-        <p><strong>No. of Pages:</strong> ${book.pagesNumber} page(s)</p>`
+        <p><strong>No. of Pages:</strong> ${book.pagesNumber} page(s)</p>
+        <p><button onclick="deleteBook(${index})">Delete</button></p>`
     );
     document.getElementById('books').innerHTML = booksDiv.join('');
 }
